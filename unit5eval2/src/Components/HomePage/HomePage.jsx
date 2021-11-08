@@ -1,6 +1,8 @@
 import React from 'react';
 import axios from 'axios';
 import { Card, CardContent, Typography } from '@material-ui/core';
+import styles from './Homepage.module.css'
+import {Link} from 'react-router-dom'
 
 
 function HomePage() {
@@ -15,10 +17,11 @@ function HomePage() {
     }
     return (
         <div>
-            <div>
+            <div className={styles.cont}>
                 {list.map((item)=>{
                     return (
-                    <Card style={{width:300,backgroundColor:'red'}}>
+                <Link to={`list/${item.id}`}>
+                    <Card style={{width:350,backgroundColor:'red'}}>
                         <CardContent>
                             <Typography style={{fontSize:15}}>
                                 {item.name}
@@ -32,6 +35,7 @@ function HomePage() {
                             <img src={item.image} alt="/"/>
                         </CardContent>
                     </Card>
+                    </Link>
                     )
                     })}
             </div>

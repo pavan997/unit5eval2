@@ -1,0 +1,7 @@
+.cont{
+    display:grid;
+    grid-template-columns: auto auto auto;
+    grid-gap:50px;
+    padding: 10px;
+    margin-left: 15px;
+}

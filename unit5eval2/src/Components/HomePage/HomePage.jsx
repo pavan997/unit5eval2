@@ -21,7 +21,7 @@ function HomePage() {
                 {list.map((item)=>{
                     return (
                 <Link to={`list/${item.id}`}>
-                    <Card style={{width:350,backgroundColor:'red'}}>
+                    <Card style={{width:350,backgroundColor:'#21'}}>
                         <CardContent>
                             <Typography style={{fontSize:15}}>
                                 {item.name}
@@ -32,7 +32,7 @@ function HomePage() {
                             <Typography style={{fontSize:15}}>
                                 {item.species}
                             </Typography>
-                            <img src={item.image} alt="/"/>
+                            <img src={item.image} width='250' height='250' alt="/"/>
                         </CardContent>
                     </Card>
                     </Link>
